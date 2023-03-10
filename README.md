@@ -1,1 +1,1 @@
-# Pontos_distancia
+Faça um programa, em linguagem C, que: a) Crie uma struct chamada ponto2d que tenha como atributos os pontos x,y. b) Crie duas estruturas do tipo ponto2d chamadas ponto_inicial e ponto_final. c) Mostre um menu com as seguintes opções e implemente‐as: [1] ‐ Digitar os valores do primeiro ponto [2] - Digitar os valores do segundo ponto [3] ‐ Mostrar a distância entre os pontos [4] ‐ Sair Dica: Distância entre dois pontos (x1,y1)(x2,y2): 𝑑 = √(𝑥1 − 𝑥2 ) 2 + (𝑦1 − 𝑦2 ) 2 

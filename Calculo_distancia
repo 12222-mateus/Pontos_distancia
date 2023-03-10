@@ -1,0 +1,241 @@
+#include<stdio.h> 
+
+#include<stdlib.h> 
+
+#include<math.h> 
+
+#include<locale.h> 
+
+ 
+struct ponto2d        //inicia a struct 
+
+         
+
+         
+
+        { 
+
+             
+
+            float ponto_x; 
+
+            float ponto_y;      //atributos 
+
+                     
+
+         
+
+        }; 
+
+ 
+
+int main(){ 
+
+    setlocale(LC_ALL, "Portuguese");        //Permite a utilização de acentos e letras em português 
+
+ 
+ 
+
+    int opcao=1, contador1,contador2;       //variáveis do tipo int 
+
+    float dist; 
+
+        struct ponto2d ponto_inicial;       //estrutura criada 
+
+         
+
+        { 
+
+        }; 
+
+     struct ponto2d ponto_final;         //estrutura criada 
+
+        { 
+
+        }; 
+
+        
+
+ 
+
+     
+
+    do { 
+
+         
+ 
+ 
+
+     
+
+        printf("        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"); 
+
+        printf("        -=-=-=-=-=-=-=-=-MENU-=-=-=-=-=-=-=-=\n"); //menu de opções para o usuário escolher  
+
+        printf("        -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"); 
+
+        printf("        [1] - Digitar os valores do primeiro ponto\n        [2] - Digitar os valores do segundo ponto\n     [3] - Mostrar a distância entre os pontos\n     [4] - Sair\n"); 
+
+        printf("        Digite a opcão desejada:"); 
+
+        scanf_s("%d",&opcao); // recebe a opção desejada  
+
+         
+
+         
+
+        if(opcao==1){   //caso a opção desejada seja 1 
+
+         
+
+                        //o contador1 serve para verificar 
+
+                        //se o usuário deu os todos os valores do primeiro  
+
+                        //ponto  
+
+            contador1 = 1 ;  
+
+         
+
+             
+
+         
+
+            printf("        Digite o valor de x1: "); 
+
+            scanf_s("%f",&ponto_inicial.ponto_x);     //armazena o valor de x1 
+
+         
+
+            printf("        Digite o valor de y1: "); 
+
+            scanf_s("%f",&ponto_inicial.ponto_y);     //armazena o valor de y1 
+
+         
+
+         
+
+            } 
+
+         
+
+         
+
+        else if(opcao==2){  //caso a opção desejada seja 2 
+
+            contador2 = 1;          //o contador2 serve para verificar 
+
+                                    //se o usuário deu os todos os valores do segundo  
+
+                                    //ponto  
+
+                                 
+
+             
+
+            printf("        Digite o valor de x2: "); 
+
+            scanf_s("%f",&ponto_final.ponto_x);       //armazena o valor de x2 
+
+         
+
+            printf("        Digite o valor de y2: "); 
+
+            scanf_s("%f",&ponto_final.ponto_y);       //armazena o valor de y2 
+
+            } 
+
+         
+
+        else if(opcao==3 ){     //caso a opção desejada seja 3 
+
+            if(contador1 && contador2 ){ //funciona somente se o usuário havia escolhido as opções 1 e 2 
+
+             
+
+                dist = sqrt(pow(ponto_inicial.ponto_x - ponto_final.ponto_x,2)+pow(ponto_inicial.ponto_y - ponto_final.ponto_y,2));      //fórmula da distância de dois pontos 
+
+                printf("        A distância entre os pontos (%f,%f) e (%f,%f) é %f\n",ponto_inicial.ponto_x,ponto_inicial.ponto_y,ponto_final.ponto_x,ponto_final.ponto_y,dist); 
+
+             
+
+                contador1 = 0;  
+
+                contador2 = 0; 
+
+                 
+
+                 
+
+                 
+
+                 
+
+            } 
+
+            else{ 
+
+                        //caso o usuario não tenha fornecido os valores do primeiro e segundo ponto 
+
+                printf("        VOCE DEVE FORNECER TODOS OS VALORES PARA QUE O CÁLCULO DA DISTÂNCIA ENTRE OS PONTOS SEJA FEITO\n"); 
+
+            } 
+
+             
+
+        } 
+
+             
+
+         
+
+             
+
+             
+
+        else if(opcao == 4) //opção que encerra o programa 
+
+        { 
+
+            break;      // encerra o programa 
+
+             
+
+                 
+
+         
+
+             
+
+        } 
+
+         
+
+    } while(opcao!=4);      //condição para que o loop infinito seja realizado 
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+     
+
+    printf("        -=-=-=-=-=-=-=-=-=-FIM DO PROGRAMA-=-=-=-=-=-=-=-=-=-=-=-=\n");//printa o fim do programa 
+
+     
+
+     
+
+    system("pause"); 
+
+    return 0; 
+
+} 
